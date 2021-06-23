@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'webgl-intro',
+    loadChildren: () => import('./pages/webgl-intro/webgl-intro.module').then( m => m.WebglIntroPageModule)
   },
+
 ];
 
 @NgModule({
