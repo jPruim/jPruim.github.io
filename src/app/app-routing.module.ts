@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'firebase-in-ionic',
+    loadChildren: () => import('./pages/blog/firebase-in-ionic/firebase-in-ionic.module').then( m => m.FirebaseInIonicPageModule)
+  },
 ];
 
 @NgModule({

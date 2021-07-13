@@ -1,0 +1,59 @@
+// Background color
+.menu-nav{
+    background-color: var(--ion-color-theme-light-cool);
+    overflow:hidden;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// color of menu links
+.menu-nav a{
+    display: block;
+    background-color: var(--ion-color-theme-medium-cool);
+    color: var(--ion-color-theme-dark);
+    text-align:center;
+    padding: 1.5rem;
+    font-size: large;
+    text-decoration: none;
+    float:left;
+    box-shadow: 0px 0px 3px var(--ion-color-theme-dark);
+}
+
+// hover affects
+.menu-nav a:hover{
+    background-color: var(--ion-color-theme-light-cool);
+}
+
+// by default hide icon
+.menu-nav .icon{
+    display: none;
+}
+
+// Adjust for screen size
+@media screen and (max-width: 600px){
+    .menu-nav{
+        justify-content: left;
+    }
+    .menu-nav a {
+        display: none;
+        padding: 1.5rem;
+    }
+    .menu-nav a.icon{
+        float:left;
+        display:block;
+    }
+    .menu-nav.responsive {position: relative;}
+    .menu-nav.responsive a.icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .menu-nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
